@@ -1,0 +1,897 @@
+:root {
+    --colorPrimario: #252525;
+    --colorBlanco: #fff;
+    --colorHover: #ca8b2b;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    min-height: 100%;
+}
+
+
+/*Global*/
+img {
+   max-width: 100%; 
+}
+
+.contenedor {
+    width: 85%;
+    max-width: 140rem; /*1200px*/
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h2, h3 {
+    font-weight: 400;
+}
+
+
+h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+ /* utilidades*/
+ .titulo-bloque{
+    color: var(--colorBlanco);
+ }
+
+.text-center {
+    text-align: center;
+}
+
+.d-block {
+    display: block;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+.navegacion .categoria-activa{
+    color: #ca8b2b;
+}
+
+/*Button*/
+.button {
+    background-color: #ca8b2b;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: #000;
+}
+
+.button-lista{
+    padding: 0.5rem 3rem;
+}
+
+/* nav-bar */
+.contenido-navegacion{
+    display: flex;
+}
+
+.navegacion {
+    background-color: var(--colorPrimario);
+    width: 30rem;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    transform: translateX(-30rem);
+    transition: transform .5s;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    color: white;
+    list-style: none;
+    padding: 0;
+}
+
+.navegacion a:hover {
+    color: var(--colorHover);
+}
+
+.barra {
+    width: 0;
+    height: 0;
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--colorBlanco);
+    z-index: 999;
+}
+
+.close i {
+    color: white;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(95, 94, 94, 0.527);
+    z-index: 990;
+    opacity: 1;
+    transition: opacity .5s, transform .5s;
+    transform: translateX(0);
+}
+
+.overlay.menu-open {
+    width: 100%;
+    opacity: 1;
+}
+
+
+.close {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    cursor: pointer;
+}
+
+.navegacion ul {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    transform: translateX(0);
+}
+
+.fixed-position {
+    width: 100%;
+    position: fixed;
+    overflow-y: none;
+}
+
+.sub-navegacion > ol{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.sub-navegacion > ol > li{
+    margin-right: 2rem;
+}
+
+.sub-navegacion > ol > li > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* header */
+
+.site-header.inicio{
+    position: relative;
+    height: 80rem;
+    background-image: url('../img/header-inicio.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-color{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.icon-text{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex: 0 0 calc(20% - 0px);
+    text-decoration: none;
+}
+.icon-text img {
+    max-width: 50px;
+}
+
+.icon-text span{
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.icon-text span:hover {
+    color: var(--colorHover);
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 60rem;
+    height: 100%;
+    z-index: 100;
+}
+
+.hero h1 {
+    color: var(--colorBlanco);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+.hero h1 > span{
+    display: block;
+}
+
+/*Contenido Home*/
+
+/*bloque 1*/
+.bloque {
+    background-color: #000;
+    padding: 8rem 0;
+}
+.bloque .texto-bloque{
+    color: #fff;
+}
+.bloque-1 {
+    display: flex;
+    justify-content: space-between;
+}
+.bloque-1 img {
+    max-height: 500px;
+}
+
+.contenido-bloque span{
+    color: var(--colorHover);
+}
+.contenido-bloque h2{
+    color: var(--colorBlanco);
+}
+
+/*bloque 2*/
+
+.bg-bloque-2{
+    background-image: url('../img/novedades-ra.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 12rem;
+}
+
+
+.bloque-mapa {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 5rem 3.5rem;
+}
+
+.bloque-mapa span{
+    color: var(--colorHover);
+}
+.map{
+    flex: 0 0 calc(50% - 0px);
+}
+
+.contenedor-viajes {
+    width: 100%;
+    flex: 0 0 calc(40% - 0px);
+}
+
+.contenedor-viajes .titulo-bloque{
+    line-height: 1.2;
+    margin: 3rem 0;
+}
+
+.contenedor-viajes .titulo-bloque > span{
+    color: #fff;
+    display: block;
+}
+
+.lista-viajes{
+    padding: 0;
+    list-style: none;
+    max-width: 80%;
+}
+
+.lista-item{
+    color: var(--colorBlanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.lista-item:last-child{
+    margin-bottom: 0;
+}
+
+/*HTML Novedades*/
+body > main > section.novedades-bloque.novedades-bloque-2 > div.novedades-2 > div > div > h2 > span{
+    display: block;
+    color: #fff;
+}
+
+.site-header.novedades{
+    max-height: 800px;
+    position: relative;
+}
+
+.site-header.novedades .contenido-navegacion{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+
+.site-header.novedades .carousel{
+    height: 100%;
+}
+
+.site-header.novedades .carousel .carousel-control-next-icon{
+    width: 6rem;
+    height: 6rem;
+}
+.site-header.novedades .carousel .carousel-control-prev-icon{
+    width: 6rem;
+    height: 6rem;
+}
+/*Bloque 1*/
+.novedades-bloque{
+    position: relative;
+}
+
+.novedades-bloque-1{
+    background-image: url('../img/novedades1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    display: flex;
+    justify-content: end;
+}
+.novedades-1{
+    position: relative;
+    z-index: 999;
+    max-width: 630px;
+    padding: 4rem;
+    display: flex;
+    background-color: #000;
+}
+
+.novedades-bloque-1 .texto-bloque{
+    color: var(--colorBlanco);
+}
+
+/*Bloque 2*/
+.novedades-bloque-2{
+    background-image: url('../img/ARTE.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    display: flex;
+    justify-content: start;
+}
+.novedades-2{
+    position: relative;
+    z-index: 999;
+    max-width: 630px;
+    padding: 4rem;
+    display: flex;
+    background-color: #000;
+}
+
+.novedades-bloque-2 .texto-bloque{
+    color: var(--colorBlanco);
+}
+
+.novedades-2 h2 {
+    line-height: 1.2;
+    margin-top: 1.8rem;
+}
+
+/*Seccion*/
+.bg-especial{
+    background-image: url('../img/FONDO.webp');
+}
+
+.site-header.turismo{
+    position: relative;
+}
+
+.main.turismo {
+    background-color: #000;
+    padding-top: 4rem;
+}
+
+.bloque-titulo .texto-bloque{
+    color: var(--colorBlanco);
+}
+
+
+.bloque-titulo .texto {
+    width: 50%;
+}
+
+.turismo-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.turismo-bloque .contenido-bloque{
+    width: 40%;
+}
+
+
+.turismo-bloque img{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+}
+
+.turismo-bloque.derecha{
+    flex-direction: row-reverse;
+}
+
+.bloque-video{
+    flex-direction: column;
+}
+
+.bloque-video .video{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+.contenedor-hero{
+    position: relative;
+}
+
+.hover-hero {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 8%);
+}
+
+.turismo .hero {
+    min-height: 600px;
+    background-image: url('../img/historia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.contenedor-hero .seccion-name {
+    position: absolute;
+    color: #ca8b2b;
+    z-index: 999;
+    left: 20%;
+    right: 80%;
+    top: 7%;
+    bottom: 93%;
+    font-size: 18px;
+}
+
+.main-historia .bloque{
+    padding-top: 0;
+}
+.main-historia .contenido-bloque .texto{
+    background-color: #ca8b2b;
+}
+
+.main-historia .contenido-bloque .titulo-bloque{
+    font-size: 22px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main-historia .contenido-bloque .parrafo-historia{
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.contenido-bloque .parrafo-historia .texto-bloque{
+    margin-top: 80px; 
+}
+
+.historia-navega-texto {
+    background-color: #ca8b2b;
+    margin-bottom: 80px;
+}
+
+.historia-navega .bloques-historia {
+    display: flex;
+}
+
+.historia-navega .bloques-historia .sub-bloque {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto
+}
+
+.bloques-historia{
+   margin-bottom: 80px;
+}
+
+.sub-bloque.f-60 {
+    flex: 0 0 calc(40% - 0px);
+}
+.sub-bloque.f-40 {
+    flex: 0 0 calc(30% - 0px);
+}
+
+.sub-bloque .img-sub img{
+    max-width: unset;
+
+}
+.historia-navega .sub-bloque.w-100 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.sub-bloque.w-100 .img-sub img{
+    max-width: 100%;
+}
+
+
+.historia-navega .sub-bloque.w-100 .img-sub,
+.historia-navega .sub-bloque.w-100 .sub-bloque-texto{
+    text-align: center;
+}
+
+
+
+/*Contacto*/
+.formulario-contacto {
+    max-width: 800px;
+    max-height: 800px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+.formulario-contacto p {
+    color: var(--colorHover);
+}
+
+.campo {
+    margin-bottom: 2rem;
+}
+
+.campo input{
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+}
+
+.campo-doble{
+    display: flex;
+    justify-content: space-between;
+}
+
+.campo-doble input{
+    width: 48%;
+}
+
+.text-area textarea{
+    height: 20rem;
+    width: 100%;
+}
+
+.checkbox-button {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.checkbox input {
+    width: 10%;
+    height: 20px;
+    margin-right: 1rem;
+    
+}
+.checkbox label {
+    width: 90%;
+    color: var(--colorBlanco);
+}
+
+.formulario-contacto .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.turismo  .hero-contacto {
+    background-image: unset;
+}
+
+/*Footer*/
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:  8rem 0 1rem;
+    background-image: url('../img/CONTACTO.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer .copy{
+    color: var(--colorBlanco);
+    background-color: #000;
+    padding: 1rem 2rem;
+    margin-top: 8rem;
+    font-size: 1.2rem;
+}
+
+.nav-footer{
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 20rem;
+    background-color: #000;
+}
+
+.navegacion-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navegacion-footer img{
+    margin-bottom: 4.5rem;
+}
+
+.navegacion-footer ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4.5rem;
+}
+
+.navegacion-footer ul li a{
+    background: url("../img/sprite.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-position: -0px 2px;
+    font-size: 20px;
+}
+
+.navegacion-footer ul li > .instagram{
+    background-position: -0px 2px;
+}
+
+.navegacion-footer ul li > .whatsapp{
+    background-position: -200px 2px;
+}
+
+.navegacion-footer ul li > .linkedin{
+    background-position: -250px 2px;
+}
+
+.navegacion-footer ul li{
+    margin-right: 3rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--colorBlanco);
+}
+
+.navegacion-footer ul li:last-child{
+    margin-right: 0;
+}
+
+.navegacion-footer ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.bloque-texto span{
+    color:#ca8b2b;
+}
+
+.bloque-texto h2{
+    color:var(--colorBlanco );
+}
+.bloque-texto h3{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color:var(--colorBlanco );
+}
+
+.estudiante-maestro{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.estudiante-maestro:last-child{
+    margin-bottom: 0;
+}
+
+.estudiante-maestro p{
+    color: var(--colorBlanco);
+}
+
+.estudiante-maestro .trabajo{
+    color: var(--colorHover);
+}
+
+/*Footer novedades*/
+
+footer .novedades{
+    align-items: flex-start;
+}
+
+footer .novedades ul{
+    margin-bottom: 0;
+}
+
+
+/*Newsletter footer*/
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+.newsletter h2{
+    color: #fff;
+}
+
+.newsletter p{
+    font-size: 3.4rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.newsletter .campo {
+    margin-bottom: 2rem;
+}
+.newsletter .campo:last-child {
+    margin-bottom: 0;
+}
+.newsletter .campo input{
+   width: 100%;
+}
+
+/*Footer turismo*/
+
+.footer-turismo{
+    background-image: none;
+    padding: 2rem;
+}
+.footer-turismo .copy{
+    margin: 0;
+}
+
+/*ARTE*/
+
+.main-arte .contenido-bloque-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-arte .contenido-bloque-titulo .texto-titulo{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.arte2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.arte2 .sub-bloque {
+    width: 50%;
+}
+
+.arte2 .sub-bloque.izq {
+    width: 50%;
+    margin: auto 0 auto auto;
+    text-align: end;
+}
+
+.arte2 .sub-bloque.der {
+    width: 50%;
+}
+
+.bloque-video{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grilla {
+    display: flex;
+    align-items: center;
+    margin-top: 15rem;
+}

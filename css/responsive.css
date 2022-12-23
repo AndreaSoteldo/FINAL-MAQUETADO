@@ -1,0 +1,215 @@
+/* nav-bar */
+
+@media (min-width: 768px) {
+
+    .contenido-navegacion{
+        padding: 3rem 6rem;
+        z-index: 999;
+    }
+    .navegacion {
+        background-color: unset;
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: translateX(0);
+        transition: transform 0s;
+        flex: 0 0 calc(80% - 0px);
+    }
+        
+    .navegacion ul {
+        color: #000;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        list-style: none;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .close {
+        display: none;
+    }
+    
+    .navegacion {
+        display: flex;
+    }
+
+    .navegacion ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navegacion ul li{
+        margin-right: 2rem;
+    }
+    .navegacion ul li:last-child{
+        margin-right:0;
+    }
+
+    .navegacion a {
+        font-size: 1.8rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .bars {
+        display: none;
+    }
+
+
+    .active {
+        display: none;
+    }
+}
+
+/* header */
+
+@media (max-width: 768px){
+    .icon-text{
+        width: 100%;
+        flex: unset;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Contenido Home */
+
+@media (max-width: 768px) {
+    .bloque-1 {
+        flex-direction: column;
+    }
+
+    .contenido-bloque {
+        margin-bottom: 1rem;
+    }
+
+    .contenido-bloque .texto-bloque{
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .bloque-mapa {
+       flex-direction: column;
+    }
+    .lista-viajes{
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    .novedades-bloque-1{
+        padding: 10rem 2rem;
+    }
+
+    .novedades-bloque-2{
+        padding: 10rem 2rem;
+    }
+
+    .novedades-bloque-1{
+        justify-content: center;
+    }
+    .novedades-bloque-2{
+        justify-content: center;
+    }
+
+    .site-header.novedades .carousel .carousel-control-next-icon{
+        width: 4rem;
+        height: 4rem;
+    }
+    .site-header.novedades .carousel .carousel-control-prev-icon{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media(max-width: 768px){
+
+    .site-header.turismo .icon-text{
+        padding: 1rem 0;
+    }
+    .turismo-bloque{
+        flex-direction: column-reverse;
+    }
+
+    .turismo-bloque.derecha{
+        flex-direction: column-reverse;
+    }
+
+    .turismo-bloque .contenido-bloque{
+        width: 100%;
+    }
+    .turismo .bloque {
+        padding:4rem 0;
+    }
+    .turismo .bloque-titulo .texto {
+        margin-bottom: 4rem;
+    }
+
+    .bloque-titulo .texto {
+        width: 100%;
+    }
+
+    .bloque-titulo .titulo-bloque {
+        line-height: 1.2;
+    }
+    .bloque-video{
+        flex-direction: column;
+    }
+
+    .bloque-video .video{
+        width: 100%;
+        height: 280px;
+    }
+    
+}
+
+/* Contacto */
+
+@media (max-width:768px){
+    .formulario-contacto {
+        padding-bottom: 3rem;
+        height: 100%;
+    }
+
+    .checkbox-button {
+        width: 100%;
+        flex-direction: column;
+    }
+    body > main > div > div > h1{
+        font-size: 3rem;
+    }
+}
+
+/* Footer */
+
+@media (max-width: 768px){
+    .nav-footer{
+        flex-direction: column;
+        padding: 8rem 2rem;
+    }
+
+    .navegacion-footer img{
+        max-width: 100%;
+    }
+
+    .bloque-texto{
+        margin-bottom: 4rem;
+    }
+
+    footer .copy{
+        font-size: 1.2rem;
+    }
+
+    body > footer > div.nav-footer > div > div > ul{
+        text-align: center;
+        padding: 0;
+    }
+}
